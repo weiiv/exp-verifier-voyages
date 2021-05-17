@@ -7,8 +7,7 @@
 ##############################################################
 ### Définition des variables globales
 
-# @hostname = http://sqin-demo-registre-quebec-admin.apps.exp.lab.pocquebec.org
-@hostname = http://rqc-agent-admin.apps.exp.lab.pocquebec.org
+@hostname = http://rqc-agent-admin.apps.ocp1.az.uat.aro.gocloud.gov.on.ca
 
 ####
 #### Get list de connections 

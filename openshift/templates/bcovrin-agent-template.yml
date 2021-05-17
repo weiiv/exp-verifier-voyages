@@ -185,7 +185,7 @@ objects:
       contextDir: voyages-agent
       type: Git
       git:
-        uri: 'https://github.com/CQEN-QDCE/exp-verifier-voyages.git'
+        uri: 'https://github.com/weiiv/exp-verifier-voyages.git'
     triggers:
       - type: ConfigChange
     runPolicy: Serial
@@ -374,7 +374,7 @@ objects:
   metadata:
     name: bcovrintest-agent
   spec:
-    host: bcovrintest-agent.apps.exp.lab.pocquebec.org
+    host: bcovrintest-agent.apps.ocp1.az.uat.aro.gocloud.gov.on.ca
     to:
       kind: Service
       name: bcovrintest-agent
@@ -384,19 +384,19 @@ objects:
     wildcardPolicy: None
   status:
     ingress:
-      - host: bcovrintest-agent.apps.exp.lab.pocquebec.org
+      - host: bcovrintest-agent.apps.ocp1.az.uat.aro.gocloud.gov.on.ca
         routerName: default
         conditions:
           - type: Admitted
             status: 'True'
         wildcardPolicy: None
-        routerCanonicalHostname: apps.exp.lab.pocquebec.org
+        routerCanonicalHostname: apps.ocp1.az.uat.aro.gocloud.gov.on.ca
 - kind: Route
   apiVersion: v1
   metadata:
     name: bcovrintest-agent-admin
   spec:
-    host: bcovrintest-agent-admin.apps.exp.lab.pocquebec.org
+    host: bcovrintest-agent-admin.apps.ocp1.az.uat.aro.gocloud.gov.on.ca
     to:
       kind: Service
       name: bcovrintest-agent
@@ -406,13 +406,13 @@ objects:
     wildcardPolicy: None
   status:
     ingress:
-      - host: bcovrintest-agent-admin.apps.exp.lab.pocquebec.org
+      - host: bcovrintest-agent-admin.apps.ocp1.az.uat.aro.gocloud.gov.on.ca
         routerName: default
         conditions:
           - type: Admitted
             status: 'True'
         wildcardPolicy: None
-        routerCanonicalHostname: apps.exp.lab.pocquebec.org
+        routerCanonicalHostname: apps.ocp1.az.uat.aro.gocloud.gov.on.ca
 
 
 parameters:
@@ -511,9 +511,9 @@ parameters:
   displayName: Agent endpoint
   description: The endpoint of the agent.
   required: true
-  value: "http://bcovrintest-agent.apps.exp.lab.pocquebec.org"
+  value: "http://bcovrintest-agent.apps.ocp1.az.uat.aro.gocloud.gov.on.ca"
 - name: AGENT_ADMIN_ENDPOINT
   displayName: Agent admin endpoint
   description: The endpoint of the agent.
   required: true
-  value: "http://bcovrintest-agent-admin.apps.exp.lab.pocquebec.org"
+  value: "http://bcovrintest-agent-admin.apps.ocp1.az.uat.aro.gocloud.gov.on.ca"
